@@ -1,0 +1,11 @@
+#!/bin/sh
+mkdir -p out
+inotifywait -rme modify . --include '(\.tex)$' | 
+   while read path _ file; do 
+       echo $path$file modified
+       cd out
+       context --batchmode ../$path$file
+       pkill -HUP mupdf
+       cd ..
+   done
+
