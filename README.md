@@ -9,7 +9,7 @@ Create a project directory and clone repo
 ```bash
 mkdir new-project
 cd new-project
-git clone https://github.com/turnerdev/nix-context-environment .
+git clone https://github.com/turnerdev/context-nix-environment.git .
 ```
 
 ## Usage
